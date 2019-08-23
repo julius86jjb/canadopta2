@@ -850,16 +850,12 @@ input[type=checkbox]:checked+label:before {
 }
 
 .main-header .navbar-expand-lg .navbar-nav .nav-link {
-    color: #636060;
-}
-
-.main-header .navbar-expand-lg .navbar-nav .nav-link {
     padding: 33px 15px 27px;
     line-height: 20px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
-    color: #515151;
-    text-transform: uppercase;
+    color: #6c6d6f;
+    font-family: 'Lato';
 }
 
 .main-header .navbar-expand-lg .navbar-nav .link-color:hover {
@@ -898,7 +894,7 @@ input[type=checkbox]:checked+label:before {
     min-width: 10rem;
     padding: 0;
     margin: -2px;
-    font-size: 13px;
+    font-size: 14px;
     color: #212529;
     border: 1px solid transparent;
     -webkit-transition: opacity .4s ease 0s, visibility .4s linear 0s, -webkit-transform .4s ease 0s;
@@ -917,12 +913,17 @@ input[type=checkbox]:checked+label:before {
 }
 
 .main-header .dropdown-menu a {
+    font-family: 'Open Sans', sans-serif;
     padding: 12px 20px;
     color: #535353;
     transition: all .3s ease-in-out;
     text-transform: none;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
+}
+
+.main-header .dropdown-menu a i {
+    padding-right: 8px;
 }
 
 .main-header .dropdown-menu a:hover {
@@ -7774,3 +7775,5 @@ table th {
         height: 316px;
     }
 }
+
+pc

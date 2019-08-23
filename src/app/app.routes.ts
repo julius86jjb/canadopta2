@@ -8,14 +8,14 @@ import { RegisterComponent } from './login/register.component';
 
 
 const appRoutes: Routes = [
-    {
-        path: '',
-        component: PagesComponent,
-        children: [
-            { path: 'home', component: HomeComponent },
-            { path: '', redirectTo: '/home', pathMatch: 'full' }
-        ]
-    },
+    // {
+    //     path: '',
+    //     component: PagesComponent,
+    //     children: [
+    //         { path: 'home', component: HomeComponent },
+    //         { path: '', redirectTo: '/home', pathMatch: 'full' }
+    //     ]
+    // },
 
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
