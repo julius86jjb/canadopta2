@@ -12,11 +12,11 @@ const PagesRoutes: Routes = [
         path: '',
         component: PagesComponent,
         children: [
-            { path: 'home', component: HomeComponent },
-            { path: 'adopciones', component: AdopcionesComponent },
-            { path: 'centros', component: CentrosComponent },
-            { path: 'colabora', component: ColaboraComponent },
-            { path: 'contacto', component: ContactoComponent },
+            { path: 'home', component: HomeComponent, data : {titulo: 'CanAdopta - Inicio'}  },
+            { path: 'adopciones', component: AdopcionesComponent, data : {titulo: 'CanAdopta - Adopciones'}  },
+            { path: 'centros', component: CentrosComponent, data : {titulo: 'CanAdopta - Centros de Adopción'}  },
+            { path: 'colabora', component: ColaboraComponent, data : {titulo: 'CanAdopta - Colabora'}  },
+            { path: 'contacto', component: ContactoComponent, data : {titulo: 'CanAdopta - Contacto'}  },
             { path: '', redirectTo: '/home', pathMatch: 'full' }
         ]
     },

@@ -1,5 +1,4 @@
-function init_plugins() {
-
+function iniciar_plugins() {
     $(function() {
         'use strict';
 

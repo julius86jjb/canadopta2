@@ -1,6 +1,5 @@
 var properties = {
-    "data": [
-        {
+    "data": [{
             "id": 1,
             "title": "Big Head House",
             "listing_for": "Sale",
@@ -458,12 +457,12 @@ function insertPropertyToArray(property, layout) {
 
     var element = '';
 
-    if(layout == 'grid_layout'){
-        element = '<div class="col-lg-6 col-sm-6 col-sm-6"><div class="property-box" id="' +property.id+ '">\n' +
+    if (layout == 'grid_layout') {
+        element = '<div class="col-lg-6 col-sm-6 col-sm-6"><div class="property-box" id="' + property.id + '">\n' +
             '                    <div class="property-thumbnail">\n' +
-            '                        <div class="listing-badges">'+is_featured+'</div>\n' +
+            '                        <div class="listing-badges">' + is_featured + '</div>\n' +
             '                            <div class="price-ratings-box">\n' +
-            '                                <p class="price">$'+price+'</p>\n' +
+            '                                <p class="price">$' + price + '</p>\n' +
             '                                <div class="ratings">\n' +
             '                                    <i class="fa fa-star"></i>\n' +
             '                                    <i class="fa fa-star"></i>\n' +
@@ -472,35 +471,35 @@ function insertPropertyToArray(property, layout) {
             '                                    <i class="fa fa-star-o"></i>\n' +
             '                                </div>\n' +
             '                            </div>\n' +
-            '                            <img class="d-block w-100" src="'+image+'" alt="First slide">\n' +
+            '                            <img class="d-block w-100" src="' + image + '" alt="First slide">\n' +
             '                       </div>\n' +
             '                    <div class="detail">\n' +
             '                        <h1 class="title">\n' +
-            '                            <a href="properties-details.html">'+title+'</a>\n' +
+            '                            <a href="properties-details.html">' + title + '</a>\n' +
             '                        </h1>\n' +
             '                        <div class="location">\n' +
             '                            <a href="properties-details.html">\n' +
-            '                                <i class="fa fa-map-marker"></i>'+address+',\n' +
+            '                                <i class="fa fa-map-marker"></i>' + address + ',\n' +
             '                            </a>\n' +
             '                        </div>\n' +
             '                        <ul class="facilities-list clearfix">\n' +
             '                            <li>\n' +
-            '                                <i class="flaticon-furniture"></i> '+bedroom+' Bedrooms\n' +
+            '                                <i class="flaticon-furniture"></i> ' + bedroom + ' Bedrooms\n' +
             '                            </li>\n' +
             '                            <li>\n' +
-            '                                <i class="flaticon-holidays"></i> '+bathroom+' Bathrooms\n' +
+            '                                <i class="flaticon-holidays"></i> ' + bathroom + ' Bathrooms\n' +
             '                            </li>\n' +
             '                            <li>\n' +
-            '                                <i class="flaticon-square"></i> Sq Ft:'+area+'\n' +
+            '                                <i class="flaticon-square"></i> Sq Ft:' + area + '\n' +
             '                            </li>\n' +
             '                            <li>\n' +
-            '                                <i class="flaticon-vehicle"></i> '+garage+' Garage\n' +
+            '                                <i class="flaticon-vehicle"></i> ' + garage + ' Garage\n' +
             '                            </li>\n' +
             '                        </ul>\n' +
             '\n' + '                </div>' +
             '                       <div class="footer clearfix">\n' +
             '                            <div class="pull-left days">\n' +
-            '                                <p><i class="fa fa-calendar-o"></i> '+date+'</p>\n' +
+            '                                <p><i class="fa fa-calendar-o"></i> ' + date + '</p>\n' +
             '                            </div>\n' +
             '                            <ul class="pull-right">\n' +
             '                                <li><a href="#"><i class="flaticon-favorite"></i></a></li>\n' +
@@ -509,16 +508,15 @@ function insertPropertyToArray(property, layout) {
             '                        </div>' +
             '                </div>' +
             '</div>';
-    }
-    else{
-        element = '<div class="property-box-2" id="'+property.id+'">\n' +
+    } else {
+        element = '<div class="property-box-2" id="' + property.id + '">\n' +
             '                    <div class="row">\n' +
             '                        <div class="col-lg-5 col-md-5 col-pad">\n' +
             '                            <a href="properties-details.html" class="property-img">\n' +
-            '                                <img src="'+image+'" alt="properties" class="img-fluid">\n' +
-            '                                <div class="listing-badges">'+is_featured+'</div>\n' +
+            '                                <img src="' + image + '" alt="properties" class="img-fluid">\n' +
+            '                                <div class="listing-badges">' + is_featured + '</div>\n' +
             '                                <div class="price-ratings-box">\n' +
-            '                                    <p class="price">$'+price+'</p>\n' +
+            '                                    <p class="price">$' + price + '</p>\n' +
             '                                    <div class="ratings">\n' +
             '                                        <i class="fa fa-star"></i>\n' +
             '                                        <i class="fa fa-star"></i>\n' +
@@ -532,29 +530,29 @@ function insertPropertyToArray(property, layout) {
             '                        <div class="col-lg-7 col-md-7">\n' +
             '                            <div class="detail ">\n' +
             '                                <h3 class="title">\n' +
-            '                                    <a href="properties-details.html">'+title+'</a>\n' +
+            '                                    <a href="properties-details.html">' + title + '</a>\n' +
             '                                </h3>\n' +
             '                                <h5 class="location">\n' +
             '                                    <a href="properties-details.html">\n' +
-            '                                        <i class="flaticon-location"></i>'+address+'\n' +
+            '                                        <i class="flaticon-location"></i>' + address + '\n' +
             '                                    </a>\n' +
             '                                </h5>\n' +
             '                                <ul class="facilities-list clearfix">\n' +
             '                                    <li>\n' +
             '                                        <i class="flaticon-furniture"></i>\n' +
-            '                                        <span>'+bedroom+' Beds</span>\n' +
+            '                                        <span>' + bedroom + ' Beds</span>\n' +
             '                                    </li>\n' +
             '                                    <li>\n' +
             '                                        <i class="flaticon-holidays"></i>\n' +
-            '                                        <span>'+bathroom+' Baths</span>\n' +
+            '                                        <span>' + bathroom + ' Baths</span>\n' +
             '                                    </li>\n' +
             '                                    <li>\n' +
             '                                        <i class="flaticon-square"></i>\n' +
-            '                                        <span>'+area+' sq ft</span>\n' +
+            '                                        <span>' + area + ' sq ft</span>\n' +
             '                                    </li>\n' +
             '                                    <li>\n' +
             '                                        <i class="flaticon-vehicle"></i>\n' +
-            '                                        <span>'+garage+' Garage</span>\n' +
+            '                                        <span>' + garage + ' Garage</span>\n' +
             '                                    </li>\n' +
             '                                    <li>\n' +
             '                                        <i class="flaticon-monitor"></i>\n' +
@@ -562,14 +560,14 @@ function insertPropertyToArray(property, layout) {
             '                                    </li>\n' +
             '                                    <li>\n' +
             '                                        <i class="flaticon-window"></i>\n' +
-            '                                        <span>'+balcony+' Balcony</span>\n' +
+            '                                        <span>' + balcony + ' Balcony</span>\n' +
             '                                    </li>\n' +
             '                                </ul>\n' +
             '                            </div>' +
             '                           <a href="properties-details.html" class="btn button-theme">Details</a>\n' +
             '                            <div class="footer">\n' +
             '                                <div class="pull-left days">\n' +
-            '                                    <p><i class="flaticon-time"></i> '+date+'</p>\n' +
+            '                                    <p><i class="flaticon-time"></i> ' + date + '</p>\n' +
             '                                </div>\n' +
             '                                <ul class="pull-right">\n' +
             '                                    <li><a href="#"><i class="flaticon-favorite"></i></a></li>\n' +
@@ -586,16 +584,15 @@ function insertPropertyToArray(property, layout) {
 function animatedMarkers(map, propertiesMarkers, properties, layout) {
     var bounds = map.getBounds();
     var propertiesArray = [];
-    $.each(propertiesMarkers, function (key, value) {
+    $.each(propertiesMarkers, function(key, value) {
         if (bounds.contains(propertiesMarkers[key].getLatLng())) {
             propertiesArray.push(insertPropertyToArray(properties.data[key], layout));
-            setTimeout(function () {
+            setTimeout(function() {
                 if (propertiesMarkers[key]._icon != null) {
                     propertiesMarkers[key]._icon.className = 'leaflet-marker-icon leaflet-zoom-animated leaflet-clickable bounce-animation marker-loaded';
                 }
             }, key * 50);
-        }
-        else {
+        } else {
             if (propertiesMarkers[key]._icon != null) {
                 propertiesMarkers[key]._icon.className = 'leaflet-marker-icon leaflet-zoom-animated leaflet-clickable';
             }
@@ -619,7 +616,7 @@ function generateMap(latitude, longitude, mapProvider, layout) {
     });
     var propertiesMarkers = [];
 
-    $.each(properties.data, function (index, property) {
+    $.each(properties.data, function(index, property) {
         var icon = '<img src="img/logos/logo.png">';
         if (property.type_icon) {
             icon = '<img src="' + property.type_icon + '">';
@@ -648,33 +645,33 @@ function generateMap(latitude, longitude, mapProvider, layout) {
         propertiesMarkers.push(marker);
         marker.bindPopup(drawInfoWindow(property));
         markers.addLayer(marker);
-        marker.on('popupopen', function () {
+        marker.on('popupopen', function() {
             this._icon.className += ' marker-active';
         });
-        marker.on('popupclose', function () {
+        marker.on('popupclose', function() {
             this._icon.className = 'leaflet-marker-icon leaflet-zoom-animated leaflet-clickable marker-loaded';
         });
     });
 
     map.addLayer(markers);
     animatedMarkers(map, propertiesMarkers, properties, layout);
-    map.on('moveend', function () {
+    map.on('moveend', function() {
         animatedMarkers(map, propertiesMarkers, properties, layout);
     });
 
     $('.fetching-properties .property-box-2, .fetching-properties .property-box').hover(
-        function () {
+        function() {
             propertiesMarkers[$(this).attr('id') - 1]._icon.className = 'leaflet-marker-icon leaflet-zoom-animated leaflet-clickable marker-loaded marker-active';
         },
-        function () {
+        function() {
             propertiesMarkers[$(this).attr('id') - 1]._icon.className = 'leaflet-marker-icon leaflet-zoom-animated leaflet-clickable marker-loaded';
         }
     );
 
 
 
-    $('.geolocation').on("click", function () {
-        map.locate({setView: true})
+    $('.geolocation').on("click", function() {
+        map.locate({ setView: true })
     });
     $('#map').removeClass('fade-map');
 }
