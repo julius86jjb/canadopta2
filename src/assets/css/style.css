@@ -853,7 +853,7 @@ input[type=checkbox]:checked+label:before {
     padding: 33px 15px 27px;
     line-height: 20px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color: #6c6d6f;
     font-family: 'Lato';
 }
@@ -3829,6 +3829,30 @@ footer {
     color: #8b8b8b;
     text-decoration: none;
     font-size: 13px;
+}
+
+.form-content-box2 {
+    max-width: 1000px;
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0 1px 1px;
+    color: #7c7c7c;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-content-box2 .details {
+    padding: 45px 30px;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-content-box2 h3 {
+    margin: 0 0 50px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-content-box2 span {
+    font-size: 15px;
 }
 
 

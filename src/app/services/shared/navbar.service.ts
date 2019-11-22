@@ -26,11 +26,11 @@ export class NavbarService {
             url: '/colabora',
             submenu: []
         },
-        {
-            titulo: 'Contacto',
-            url: '/contacto',
-            submenu: []
-        },
+        // {
+        //     titulo: 'Contacto',
+        //     url: '/contacto',
+        //     submenu: []
+        // },
         {
             titulo: '+ Mi CanAdopta',
             url: '/',

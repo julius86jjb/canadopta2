@@ -1,36 +1,135 @@
+<div class="row" style="padding: 10px;">
+    <div class="col-lg-12">
+        <header>
+            <nav class="container nav-bar" role="navigation">
+                <a href="#">
+                    <span><b><span style="font-size: 30px;">C</span>AN<span style="font-size: 30px;">A</span>DOPTA</b>
+                    </span>
+                </a>
+                <!-- / Nav Menu Button -->
+
+                <div style="float: right;">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a routerLink="/prev_registro">
+                                <button type="button" class="btn btn-danger btn-sm">Volver a Tipo de Cuenta</button>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/login">
+                                <button type="button" class="btn btn-warning btn-sm">Iniciar Sesión</button>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+    </div>
+</div>
+
+
 <!-- Contact section start -->
 <div class="contact-section overview-bgi">
     <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2 class="text-uppercase" data-animation="animated fadeInDown delay-05s">Registro de Adoptantes</h2>
+            </div>
+
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <!-- Form content box start -->
                 <div class="form-content-box">
                     <!-- Logo-->
-                    <a href="index.html">
-                        <img src="assets/img/logos/white-logo.png" class="cm-logo" alt="black-logo">
-                    </a>
+
                     <!-- details -->
                     <div class="details">
+                        <div class="form-group mb-4">
+
+                            <button type="button" class="btn-md btn-google" style="width:100%"><i class="fa fa-google" aria-hidden="true"></i>
+                                Regístrate con Google</button>
+                        </div>
                         <!-- Name -->
-                        <h3>Crear una cuenta</h3>
-                        <!-- Form start-->
-                        <form action="index.html" method="GET">
+                        <h5 class="mb-4" style="font-size: 15px;">O regístrate con tu correo eléctronico</h5>
+                        <form ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarUsuario()">
                             <div class="form-group">
-                                <input type="text" name="fullname" class="input-text" placeholder="Nombre Completo">
+                                <input formControlName="nombre" type="text" name="nombre" class="input-text" placeholder="Nombre" required>
                             </div>
+
                             <div class="form-group">
-                                <input type="email" name="email" class="input-text" placeholder="Email">
+                                <input formControlName="apellidos" type="text" name="apellidos" class="input-text" placeholder="Apellidos" required>
                             </div>
+
                             <div class="form-group">
-                                <input type="password" name="password" class="input-text" placeholder="Contraseña">
+                                <input formControlName="email" type="email" name="email" class="input-text" placeholder="Email" required>
                             </div>
+
+                            <div class="mensaje-validacion-form form-group text-right text-danger" *ngIf="forma.get('email').errors && !!forma.get('email').errors.emailTaken">
+
+                                <small>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    Este email ya ha sido registrado!
+                                    <a routerLink="/login"><b> Inicia Sesión</b></a>
+                                </small>
+
+                            </div>
+
+                            <div class="mensaje-validacion-form form-group text-right text-danger" *ngIf="forma.controls['email'].errors && !!forma.controls.email.errors.pattern">
+
+                                <small>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                     Formato de email incorrecto!
+                                   
+                                </small>
+
+                            </div>
+
                             <div class="form-group">
-                                <input type="password" name="confirm_Password" class="input-text" placeholder="Confirmar contraseña">
+                                <input formControlName="password" type="password" name="password" class="input-text" placeholder="Contraseña" required>
                             </div>
-                            <div class="form-group " style="text-align:left">
+
+
+                            <div class="mensaje-validacion-form form-group text-right text-danger" *ngIf="forma.get('password').errors && !!forma.get('password').errors.minlength">
+
+                                <small>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    La constraseña debe contener al menos 6 carácteres!
+                                   
+                                </small>
+
+                            </div>
+
+                            <div class="mensaje-validacion-form form-group text-right text-danger" *ngIf="forma.get('password').errors && !!forma.get('password').errors.maxlength">
+
+                                <small>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                     La constraseña debe contener como máximo 20 carácteres!
+                                   
+                                </small>
+
+                            </div>
+
+                            <div class="form-group">
+                                <input formControlName="password2" type="password" name="password2" class="input-text" placeholder="Confirmar contraseña" required>
+                            </div>
+
+                            <div class="mensaje-validacion-form form-group text-right text-danger" *ngIf="!forma.controls.password2.pristine && !!forma.errors?.sonIguales">
+
+                                <small>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                     Las contraseñas no coinciden!
+                                   
+                                </small>
+
+                            </div>
+
+
+                            <div class="form-group " style="text-align:left;">
 
                                 <div class="checkbox checkbox-primary p-t-0 left">
-                                    <input id="checkbox-signup" type="checkbox">
+                                    <input formControlName="condiciones" name="condiciones" id="checkbox-signup" type="checkbox">
                                     <label for="checkbox-signup" style="margin-left: 5px"> Estoy de acuerdo con los  <a href="#">Términos</a></label>
                                 </div>
 
@@ -44,7 +143,7 @@
                     <!-- Footer -->
                     <div class="footer">
                         <span>
-                            Eres miembro? <a href="login.html">Inicar sesión</a>
+                            Ya eres miembro? <a  routerLink="/login">Inicia sesión</a>
                         </span>
                     </div>
                 </div>
